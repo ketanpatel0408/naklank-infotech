@@ -8468,6 +8468,13 @@ ul, ol {
     text-align: center;
   }
 }
+@media screen and (max-width: 767px) {
+  .bannerSection h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white-color);
+  }
+}
 .bannerSection h1 {
   font-size: 60px;
   font-weight: 900;
@@ -8480,6 +8487,20 @@ ul, ol {
     padding-left: 0;
     text-align: center;
     margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bannerSection h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--white-color);
+  }
+}
+@media screen and (max-width: 400px) {
+  .bannerSection h1 {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--white-color);
   }
 }
 .bannerSection h1 span {
@@ -8601,11 +8622,20 @@ ul, ol {
   z-index: 9;
   position: relative;
   margin: 10px 0 0 0;
+  text-align: justify;
 }
 @media screen and (max-width: 1199px) {
   .serviceSection .leftSide p {
+    max-width: 600px;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 575px) {
+  .serviceSection .leftSide p {
     max-width: 450px;
     margin: 10px auto 0;
+    text-align: center;
   }
 }
 .serviceSection img.leftImg {
@@ -8622,6 +8652,11 @@ ul, ol {
   grid-template-columns: 0.6fr 1fr 1.8fr 0.9fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .serviceSection .rightSide .item .box {
+    display: block;
+  }
 }
 .serviceSection .rightSide .item .box .icon {
   width: 90px;
@@ -8644,6 +8679,11 @@ ul, ol {
   -o-object-position: center;
      object-position: center;
 }
+@media screen and (max-width: 767px) {
+  .serviceSection .rightSide .item .box .title {
+    margin-top: 30px;
+  }
+}
 .serviceSection .rightSide .item .box .title h5 {
   font-size: 24px;
   line-height: 32px;
@@ -8658,6 +8698,12 @@ ul, ol {
 }
 .serviceSection .rightSide .item .box .button {
   text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .serviceSection .rightSide .item .box .button {
+    text-align: left;
+    margin-top: 15px;
+  }
 }
 .serviceSection .rightSide .item .box .button a {
   background: var(--white-color);

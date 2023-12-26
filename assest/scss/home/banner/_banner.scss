@@ -46,6 +46,10 @@
             padding-left: 0;
             text-align: center;
         }
+
+        @include max-media(767px) {
+            @include basic-style(16px, null, 500, var(--white-color));
+        }
     }
 
     & h1 {
@@ -57,6 +61,14 @@
             padding-left: 0;
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        @include max-media(767px) {
+            @include basic-style(40px, null, 900, var(--white-color));
+        }
+
+        @include max-media(400px) {
+            @include basic-style(30px, null, 900, var(--white-color));
         }
 
         & span {

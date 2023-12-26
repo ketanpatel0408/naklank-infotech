@@ -33,10 +33,18 @@
             z-index: 9;
             position: relative;
             margin: 10px 0 0 0;
+            text-align: justify;
 
             @include max-media(1199px) {
+                max-width: 600px;
+                margin: 10px auto 0;
+                text-align: center;
+            }
+
+            @include max-media(575px) {
                 max-width: 450px;
                 margin: 10px auto 0;
+                text-align: center;
             }
         }
     }
@@ -62,6 +70,10 @@
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 align-items: center;
 
+                @include max-media(767px) {
+                    display: block;
+                }
+
                 & .icon {
                     width: 90px;
                     height: 90px;
@@ -84,6 +96,10 @@
                 }
 
                 & .title {
+                    @include max-media(767px) {
+                        margin-top: 30px;
+                    }
+                    
                     & h5 {
                         @include basic-style(24px, 32px, 600, var(--text-color));
                     }
@@ -95,6 +111,12 @@
 
                 & .button {
                     text-align: right;
+
+                    @include max-media(767px) {
+                        text-align: left;
+                        margin-top: 15px;
+                    }
+
                     & a {
                         background: var(--white-color);
                         transition: all 0.5s ease;
