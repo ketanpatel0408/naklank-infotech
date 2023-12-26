@@ -1,0 +1,70 @@
+@mixin min-media($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+}
+
+@mixin max-media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin basic-style($size: null, $line-height: null, $font-weigth: null, $color: null) {
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+
+  @if $font-weigth {
+    font-weight: $font-weigth;
+  }
+
+  @if $color {
+    color: $color;
+  }
+}
+
+@mixin light-button($background-color: transparent, $text-color: #97cf00, $padding: 10px 25px, $border: 2px solid #97cf00, $border-radius: 40px, $hover-background: darken(#97cf00, 0), $width: 200px, $height: 58px) {
+  background-color: $background-color;
+  color: $text-color;
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+  cursor: pointer;
+  width: 160px;
+  height: 48px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $hover-background;
+    color: #ffffff;
+  }
+}
+
+@mixin dark-button($background-color: #97cf00, $text-color: #ffffff, $padding: 10px 25px, $border: 2px solid #97cf00, $border-radius: 40px, $hover-background: darken($background-color, 10%)) {
+  background-color: $background-color;
+  color: $text-color;
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+  cursor: pointer;
+  width: 160px;
+  height: 48px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $hover-background;
+  }
+}
+
+@import "./spacing";

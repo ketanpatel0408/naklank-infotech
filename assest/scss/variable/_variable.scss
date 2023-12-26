@@ -1,0 +1,15 @@
+:root {
+    // Colors
+    --primary-color: #97cf00;
+    --secondary-color: #191919;
+    --white-color: #ffffff;
+    --background-color: #f8f9fa;
+    --text-color: #191919;
+    --grey-color: #f2f2f2;
+    --link-color: var(--primary-color);
+    // Font
+    --font-family: 'Poppins', sans-serif;
+}
+
+@import "mixins";
+@import "font";

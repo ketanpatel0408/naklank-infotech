@@ -1,0 +1,36 @@
+@import "variable/variable";
+
+body {
+    font-family: var(--font-family);
+    @include basic-style(16px, 1.6, 700, var(--text-color));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    @include basic-style(null, null, 700, var(--text-color));
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--link-hover-color);
+        text-decoration: underline;
+    }
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1300px;
+    position: relative;
+}
+
+@import "header/header";
+@import "pages";
