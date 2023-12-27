@@ -1,0 +1,107 @@
+.workingProcessSection {
+    background-color: var(--grey-color);
+    padding: 100px 0;
+    position: relative;
+
+    & .heading {
+        text-align: center;
+
+        & span {
+            @include basic-style(16px, 24px, 600, var(--white-color));
+            position: relative;
+            text-transform: uppercase;
+            margin: 0 0 10px;
+            display: inline-block;
+            background: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 10px;
+        }
+
+        & h2 {
+            @include basic-style(40px, 1.5, 500, var(--text-color));
+            z-index: 9;
+            padding: 0;
+            margin: 0 auto;
+            position: relative;
+            display: block;
+            max-width: 600px;
+        }
+    }
+
+    & .process-step {
+        padding-top: 90px;
+        margin-right: 45px;
+        position: relative;
+
+        @include max-media(1199px) {
+            margin: 0;
+        }
+
+        & .number {
+            @include basic-style(130px, 138px, 600, var(--text-color));
+            position: absolute;
+            top: 0;
+            right: 90px;
+            opacity: 0.06;
+        }
+
+        & .info {
+            position: relative;
+
+            & h5 {
+                margin-bottom: 5px;
+                @include basic-style(28px, 36px, 600, var(--text-color));
+            }
+
+            & p {
+                margin-bottom: 20px;
+                @include basic-style(16px, 26px, 400, var(--text-color));
+            }
+
+            & .button {
+                & a {
+                    background: var(--primary-color);
+                    transition: all 0.5s ease;
+                    padding: 0;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+
+                    & img {
+                        width: 20px;
+                        filter: brightness(0) invert(1);
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                        border: 1px solid var(--primary-color);
+
+                        & img {
+                            filter: brightness(1) invert(0);
+                        }
+                    }
+                }
+            }
+
+            & .before-img {
+                position: absolute;
+                top: -15px;
+                left: calc(100% - 60px);
+                width: 200px;
+                height: 100px;
+                object-fit: contain;
+                object-position: center;
+                opacity: 0.1;
+
+                @include max-media(1199px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
