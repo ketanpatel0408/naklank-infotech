@@ -26,6 +26,14 @@
             margin: 0 0;
             position: relative;
             display: block;
+
+            @include max-media(767px) {
+                @include basic-style(40px, 50px, 500, var(--text-color));
+            }
+    
+            @include max-media(400px) {
+                @include basic-style(30px, 40px, 500, var(--text-color));
+            }
         }
 
         & p {

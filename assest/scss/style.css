@@ -32914,6 +32914,22 @@ ul, ol {
   position: relative;
   display: block;
 }
+@media screen and (max-width: 767px) {
+  .serviceSection .leftSide h4 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+}
+@media screen and (max-width: 400px) {
+  .serviceSection .leftSide h4 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+}
 .serviceSection .leftSide p {
   font-size: 16px;
   line-height: 1.5;
@@ -33069,6 +33085,21 @@ ul, ol {
   display: block;
   max-width: 600px;
 }
+@media screen and (max-width: 767px) {
+  .workingProcessSection .heading h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--text-color);
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .workingProcessSection .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+}
 .workingProcessSection .process-step {
   padding-top: 90px;
   margin-right: 45px;
@@ -33146,4 +33177,193 @@ ul, ol {
   .workingProcessSection .process-step .info .before-img {
     display: none;
   }
+}
+
+.techSection {
+  background-color: var(--secondary-color);
+  padding: 100px 0;
+  position: relative;
+}
+.techSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assest/images/tech_bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+.techSection .heading {
+  text-align: center;
+}
+.techSection .heading span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  display: inline-block;
+  background: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.techSection .heading h3 {
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--white-color);
+  z-index: 9;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .techSection .heading h3 {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--white-color);
+  }
+}
+@media screen and (max-width: 575px) {
+  .techSection .heading h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--white-color);
+  }
+}
+.techSection .heading .btn {
+  background-color: transparent;
+  color: #97cf00;
+  padding: 10px 25px;
+  border: 2px solid #97cf00;
+  border-radius: 40px;
+  cursor: pointer;
+  width: 160px;
+  height: 48px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 40px auto 0;
+}
+.techSection .heading .btn:hover {
+  background-color: #97cf00;
+  color: #ffffff;
+}
+
+.testiSection {
+  background-color: var(--secondary-color);
+  padding: 100px 0;
+  position: relative;
+}
+.testiSection::before {
+  content: "";
+  background-color: var(--white-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 31%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 31%, 100% 100%, 0% 100%);
+}
+@media screen and (max-width: 767px) {
+  .testiSection::before {
+    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  }
+}
+.testiSection .testimonial {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+.testiSection .testimonial .heading {
+  text-align: left;
+  margin-bottom: 60px;
+}
+.testiSection .testimonial .heading span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--white-color);
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  display: inline-block;
+  background: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.testiSection .testimonial .heading h5 {
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--text-color);
+  z-index: 9;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .testiSection .testimonial .heading h5 {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+}
+@media screen and (max-width: 400px) {
+  .testiSection .testimonial .heading h5 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+}
+.testiSection .testimonial .box .content .star {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.testiSection .testimonial .box .content p {
+  margin-bottom: 35px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.testiSection .testimonial .box .content .info h6 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+.testiSection .testimonial .box .content .info span {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+.testiSection .testimonialImg {
+  width: 100%;
+  height: calc(100% + 30px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+  box-shadow: -10px 20px 30px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -25,6 +25,15 @@
             position: relative;
             display: block;
             max-width: 600px;
+
+            @include max-media(767px) {
+                @include basic-style(40px, null, 500, var(--text-color));
+                max-width: 100%;
+            }
+    
+            @include max-media(400px) {
+                @include basic-style(30px, null, 500, var(--text-color));
+            }
         }
     }
 
