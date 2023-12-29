@@ -24,20 +24,59 @@ $(document).ready(function () {
             $(this).removeClass('active');
         }
     );
-});
 
-$(window).scroll(function(){
     var sticky = $('.header'),
         scroll = $(window).scrollTop();
-  
     if (scroll >= 10) {
         sticky.addClass('header_fixed');
         sticky.find("#mainLogo").attr('src', 'assest/images/logo.png');
-    } 
-    else {
+    }
+});
+
+$(document).on("click", ".header .navbar-toggler", function () {
+    $(this).find("i").toggleClass("fas fa-bars fas fa-times");
+    if ($("body").find(".navFix").length > 0) {
+        $("body").find(".navFix").remove();
+        $("body").find(".header").removeClass("nav-header");
+        $("body").removeClass("overflow-hidden");
+    } else {
+        $("body").append("<div class='navFix'></div>");
+        $("body").find(".header").addClass("nav-header");
+        $("body").addClass("overflow-hidden");
+    }
+});
+
+$(document).on("click", ".navFix", function () {
+    $(this).remove();
+    $(".header .navbar-toggler").find("i").toggleClass("fas fa-times fas fa-bars");
+    $("#headerNavbar").removeClass("show");
+    $("body").find(".header").removeClass("nav-header");
+    $("body").removeClass("overflow-hidden");
+});
+
+$('.header .navbar-nav .nav-item.dropdown').hover(function () {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    $(this).find('.dropdown-toggle').attr('aria-expanded', 'true');
+}, function () {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    $(this).find('.dropdown-toggle').attr('aria-expanded', 'false');
+});
+
+$('.header .navbar-nav .nav-item.dropdown').on('click', function (e) {
+    e.stopPropagation();
+});
+
+$(window).scroll(function () {
+    var sticky = $('.header'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= 10) {
+        sticky.addClass('header_fixed');
+        sticky.find("#mainLogo").attr('src', 'assest/images/logo.png');
+    } else {
         sticky.removeClass('header_fixed');
         sticky.find("#mainLogo").attr('src', 'assest/images/white_logo.png');
-    } 
+    }
 });
 
 var phoneInput = $("#phone");

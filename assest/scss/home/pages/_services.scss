@@ -1,0 +1,170 @@
+.serviceSection {
+    padding: 130px 0;
+    position: relative;
+
+    & .leftSide {
+
+        @include max-media(1199px) {
+            text-align: center;
+        }
+
+        & span {
+            @include basic-style(16px, 24px, 600, var(--white-color));
+            position: relative;
+            text-transform: uppercase;
+            margin: 0 0 10px;
+            display: inline-block;
+            background: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 10px;
+        }
+
+        & h4 {
+            @include basic-style(48px, 56px, 500, var(--text-color));
+            z-index: 9;
+            padding: 0;
+            margin: 0 0;
+            position: relative;
+            display: block;
+
+            @include max-media(767px) {
+                @include basic-style(40px, 50px, 500, var(--text-color));
+            }
+    
+            @include max-media(400px) {
+                @include basic-style(30px, 40px, 500, var(--text-color));
+            }
+        }
+
+        & p {
+            @include basic-style(16px, 1.5, 400, var(--text-color));
+            z-index: 9;
+            position: relative;
+            margin: 10px 0 0 0;
+            text-align: justify;
+
+            @include max-media(1199px) {
+                max-width: 600px;
+                margin: 10px auto 0;
+                text-align: center;
+            }
+
+            @include max-media(575px) {
+                max-width: 450px;
+                margin: 10px auto 0;
+                text-align: center;
+            }
+        }
+    }
+
+    & img.leftImg {
+        max-width: 80%;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    & .rightSide {
+        & .item {
+            &:first-child {
+                & .box {
+                    padding-top: 0;
+                }
+            }
+
+            & .box {
+                display: grid;
+                padding: 30px 0;
+                grid-template-columns: 0.6fr 1.0fr 1.8fr 0.9fr;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                align-items: center;
+
+                @include max-media(767px) {
+                    display: block;
+                }
+
+                & .icon {
+                    width: 90px;
+                    height: 90px;
+                    line-height: 90px;
+                    background: var(--grey-color);
+                    text-align: center;
+                    border-radius: 100%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.5s ease;
+
+                    & img {
+                        fill: var(--text-color);
+                        width: 50px;
+                        height: 50px;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+
+                & .title {
+                    @include max-media(767px) {
+                        margin-top: 30px;
+                    }
+                    
+                    & h5 {
+                        @include basic-style(24px, 32px, 600, var(--text-color));
+                    }
+                }
+
+                & p {
+                    @include basic-style(16px, 1.5, 400, var(--text-color));
+                }
+
+                & .button {
+                    text-align: right;
+
+                    @include max-media(767px) {
+                        text-align: left;
+                        margin-top: 15px;
+                    }
+
+                    & a {
+                        background: var(--white-color);
+                        transition: all 0.5s ease;
+                        padding: 0;
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100px;
+
+                        & img {
+                            width: 20px;
+                            fill: var(--text-color);
+                        }
+                    }
+                }
+
+                &.active {
+                    & .icon {
+                        background: var(--primary-color);
+
+                        & img {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+
+                    & .button {
+                        & a {
+                            transform: translateX(5px);
+                            background: var(--primary-color);
+                            & img {
+                                filter: brightness(0) invert(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

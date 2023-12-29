@@ -32,5 +32,6 @@ ul, ol {
     position: relative;
 }
 
-@import "header/header";
+@import "common/header";
 @import "pages";
+@import "common/footer";

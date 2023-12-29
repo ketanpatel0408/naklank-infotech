@@ -1,0 +1,25 @@
+.quoteSection {
+    padding: 70px 0;
+    position: relative;
+    background-color: var(--primary-color);
+
+    & h2 {
+        @include basic-style(35px, 45px, 600, var(--white-color));
+        text-align: left;
+        margin-bottom: 0;
+
+        @include max-media(1199px) {
+            text-align: center;
+        }
+
+
+        @include max-media(575px) {
+            @include basic-style(24px, 34px, 600, var(--white-color));
+        }
+    }
+
+    & .btn {
+        @include black-button();
+        text-transform: uppercase;
+    }
+}
