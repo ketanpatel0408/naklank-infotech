@@ -54,11 +54,20 @@
     }
 
     & .navbar {
+
+        @include max-media(991px) {
+            padding: 0;
+        }
+
         & .navbar-toggler {
             color: var(--white-color);
-            font-size: 35px;
+            font-size: 30px;
             padding: 0;
             margin-right: 10px;
+
+            @include max-media(575px) {
+                font-size: 25px;
+            }
         }
 
         & .navbar-brand {
@@ -75,7 +84,7 @@
         & .navbar-collapse {
             @include max-media(991px) {
                 position: fixed;
-                top: 108px;
+                top: 92px;
                 right: -300px;
                 z-index: 9999;
                 background-color: var(--secondary-color);
@@ -86,7 +95,7 @@
             }
 
             @include max-media(575px) {
-                top: 94px;
+                top: 78px;
             }
 
             &.show {

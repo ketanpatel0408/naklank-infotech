@@ -32706,11 +32706,21 @@ ul, ol {
   font-weight: 400;
   color: var(--text-color);
 }
+@media screen and (max-width: 991px) {
+  .header .navbar {
+    padding: 0;
+  }
+}
 .header .navbar .navbar-toggler {
   color: var(--white-color);
-  font-size: 35px;
+  font-size: 30px;
   padding: 0;
   margin-right: 10px;
+}
+@media screen and (max-width: 575px) {
+  .header .navbar .navbar-toggler {
+    font-size: 25px;
+  }
 }
 .header .navbar .navbar-brand img {
   width: 230px;
@@ -32724,7 +32734,7 @@ ul, ol {
 @media screen and (max-width: 991px) {
   .header .navbar .navbar-collapse {
     position: fixed;
-    top: 108px;
+    top: 92px;
     right: -300px;
     z-index: 9999;
     background-color: var(--secondary-color);
@@ -32736,7 +32746,7 @@ ul, ol {
 }
 @media screen and (max-width: 575px) {
   .header .navbar .navbar-collapse {
-    top: 94px;
+    top: 78px;
   }
 }
 .header .navbar .navbar-collapse.show {
